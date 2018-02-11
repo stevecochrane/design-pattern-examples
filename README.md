@@ -23,6 +23,7 @@ add the ability to change these behaviors at runtime with the setFlyBehavior and
 To run the example:
 
 ```bash
+cd strategy-pattern/
 javac MiniDuckSimulator.java
 java MiniDuckSimulator
 ```
