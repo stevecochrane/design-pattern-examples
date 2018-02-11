@@ -13,8 +13,8 @@ through the examples in the book I'll post them here.
 This teaches about "encapsulating the part that varies," and "composition over inheritance." In this example we have a
 Duck class and some classes that extend Duck (MallardDuck, ModelDuck). Ducks will have varying quacking and flying
 behaviors. If we were to have those as methods in the Duck class itself, and then have other classes inherit the
-methods and override them each time, we would have code duplication if we want to reuse certain behaviors across
-multiple classes. It also wouldn't allow us to change these behaviors later at run-time.
+methods and override them each time, we would have code duplication if we wanted to reuse certain behaviors across
+multiple classes. It also wouldn't allow us to change these behaviors later at runtime.
 
 So, using the Strategy pattern, this example shows how we can take those methods out of the Duck class and instead
 make interfaces for both the quacking and flying behaviors. With this we can make reusable behavior classes, and also
