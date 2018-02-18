@@ -27,3 +27,34 @@ cd strategy-pattern/
 javac MiniDuckSimulator.java
 java MiniDuckSimulator
 ```
+
+## Observer Pattern
+
+This demonstrates how to have multiple classes (Observer) subscribe to updates from another class (Subject, or
+Observable), in a one-to-many relationship. Observers can be subscribed and unsubscribed from events at runtime. This
+relationship is also loosely coupled, as the Subject knows nothing about the Observers, other than that they implement
+the Observer interface.
+
+The `custom/` directory has an example of how to implement this without using Java 8's built-in support for the
+Observer pattern, and the `observable/` directory shows the same example with Observer. As the book explains,
+Observable is a class, not an interface, which violates best practices. Because it's not an interface, classes that use
+it have to subclass it, preventing them from being able to subclass other classes. Also, we can't create our own
+implementation for interacting with Java's Observer API.
+
+For both of those directories you can run the examples like this:
+
+```bash
+javac WeatherStation.java
+java WeatherStation
+```
+
+The `swing/` directory shows how to implement the Observer pattern in another way with ActionListener. The
+`inner-classes/` directory shows one possible implementation using classes for the event listeners, and the `lambdas/`
+directory is the same example but with the use of Java 8's Lambda feature.
+
+For both of these directories you can run the examples like this:
+
+```bash
+javac SwingObserverExample.java
+java SwingObserverExample
+```
