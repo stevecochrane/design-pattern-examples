@@ -12,7 +12,7 @@ public abstract class Beverage {
 		this.size = size;
 	}
 
-	public void getSize() {
+	public Size getSize() {
 		return this.size;
 	}
 
