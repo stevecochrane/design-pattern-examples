@@ -58,3 +58,18 @@ For both of these directories you can run the examples like this:
 javac SwingObserverExample.java
 java SwingObserverExample
 ```
+
+## Decorator Pattern
+
+Decorator provides a way to embellish objects with additional capabilities without needing to make subclasses. It's a
+good example of the Open/Closed principle: classes should be open for extension but closed for modification. The book
+also mentions that this may be improved upon in many cases by the Factory and Builder patterns. The Java IO libraries,
+for example, are built with extensive use of the Decorator pattern, and they demonstrate one problem with Decorator:
+it results in many, many small classes, making it harder for newcomers to know where to start.
+
+The `starbuzz-coffee/` directory has an example of a system where Decorator can be used to store data on various types
+of coffee beverages and condiments, built in a way where new beverage and condiment classes can be added freely without
+the need to modify existing classes. To run the example, compile `StarbuzzCoffee.java`.
+
+The `lowercase-string/` directory has an example showing how to convert a string to lowercase using the Java IO
+libraries. To run the example, compile `InputTest.java`.
