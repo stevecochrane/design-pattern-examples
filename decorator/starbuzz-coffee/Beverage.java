@@ -5,16 +5,12 @@ public abstract class Beverage {
 	String description = "Unknown beverage";
 
 	public String getDescription() {
-		switch (size) {
-			case TALL:
-				description = "Tall " + description;
-				break;
-			case GRANDE:
-				description = "Grande " + description;
-				break;
-			case VENTI:
-				description = "Venti " + description;
-				break;
+		if (size == TALL) {
+			description = "Tall " + description;
+		} else if (size == GRANDE) {
+			description = "Grande " + description;
+		} else if (size == VENTI) {
+			description = "Venti " + description;
 		}
 		return description;
 	}
