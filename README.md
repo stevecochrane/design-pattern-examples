@@ -96,3 +96,18 @@ going beyond just pizza to also include the ingredients for the pizza.) This res
 layer of classes so it's not always better than Factory Method, but it's useful for creating products that belong
 together. In this case there isn't a working example, because it would have caused me to create a ton of little classes
 for all of the ingredients.
+
+## Singleton Pattern
+
+Singleton is a type of class made to ensure that there is only ever one instance of it. It also provides a global
+point of access to that single instance. This can be a useful pattern for things like a registry.
+
+Multithreading can cause real problems for Singletons as it can create multiple instances. There are a few ways to
+handle this in Java. `SingletonTS.java` shows the simplest way to make it thread-safe: by adding the `synchronized`
+keyword to the public method that returns the instance. Synchronizing is not performant though, so there are a few ways
+to minimize that. `SingletonEI.java` shows a way to do that with eager instantiation, where the unique instance is
+immediately instantiated, which is guaranteed to be thread-safe. This is useful if the class is always going to be
+instantiated, or if the creation of that Singleton class doesn't have too much overhead. Then there is
+`SingletonDCL.java`, which shows a double-checked locking technique where `synchronized` is only used once, when first
+instantiating the class. However, this can be overkill if there are no performance concerns, and it isn't compatible
+with Java 5 and older.
