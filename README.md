@@ -73,3 +73,26 @@ the need to modify existing classes. To run the example, compile `StarbuzzCoffee
 
 The `lowercase-string/` directory has an example showing how to convert a string to lowercase using the Java IO
 libraries. To run the example, compile `InputTest.java`.
+
+## Factory Pattern
+
+Factory provides a way to encapsulate the creation of an object. Instead of instantiating new concrete classes, we
+can instead call a method that returns a new object, and that way we are then dependent on an interface and not a
+concrete class. This follows the Dependency Inversion Principle: "Depend upon abstractions. Do not depend upon
+concrete classes."
+
+There are three examples here. The first one, Simple Factory, is not technically a Design Pattern, but it's close. We
+have SimplePizzaFactory here, which is a separate class entirely for the creation of a pizza object. This is a step in
+the right direction, and if additional classes come along that also need to create pizzas, this will provide a
+reusable way to do that, but there's not much flexibility.
+
+The Factory Method example takes this one step further and adds an abstract PizzaStore class for more flexibility. Now
+we have an abstraction for both the product (Pizza) and the creator (PizzaStore). This enables us to extend the Pizza
+and PizzaStore classes to enable not only multiple kinds of pizzas, but multiple kinds of pizza stores creating their
+own style of pizzas. To run this example, compile `PizzaTestDrive.java`.
+
+And then we have the Abstract Factory example, which provides an interface for a family of products. (In this case
+going beyond just pizza to also include the ingredients for the pizza.) This results in another
+layer of classes so it's not always better than Factory Method, but it's useful for creating products that belong
+together. In this case there isn't a working example, because it would have caused me to create a ton of little classes
+for all of the ingredients.
