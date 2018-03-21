@@ -3,11 +3,11 @@ public class GarageDoor {
 	public GarageDoor() {}
 
 	public void up() {
-		System.out.println("The garage door is now up.");
+		System.out.println("The garage door is now open.");
 	}
 
 	public void down() {
-		System.out.println("The garage door is now down.");
+		System.out.println("The garage door is now closed.");
 	}
 
 	public void stop() {
