@@ -7,7 +7,7 @@ public class CeilingFanOnCommand implements Command {
 	}
 
 	public void execute() {
-		ceilingFan.on();
+		ceilingFan.high();
 	}
 
 }
