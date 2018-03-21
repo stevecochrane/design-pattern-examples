@@ -1,15 +1,15 @@
-public class CeilingFanOnCommand implements Command {
+public class CeilingFanLowCommand implements Command {
 
 	CeilingFan ceilingFan;
 	int previousSpeed;
 
-	public CeilingFanOnCommand(CeilingFan ceilingFan) {
+	public CeilingFanLowCommand(CeilingFan ceilingFan) {
 		this.ceilingFan = ceilingFan;
 	}
 
 	public void execute() {
 		previousSpeed = ceilingFan.getSpeed();
-		ceilingFan.high();
+		ceilingFan.low();
 	}
 
 	public void undo() {
