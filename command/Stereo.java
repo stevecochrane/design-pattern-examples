@@ -1,29 +1,33 @@
 public class Stereo {
 
-	public Stereo() {}
+	String label = "unlabeled";
+
+	public Stereo(String label) {
+		this.label = label;
+	}
 
 	public void on() {
-		System.out.println("The stereo is now on.");
+		System.out.println("The " + label + " stereo is now on.");
 	}
 
 	public void off() {
-		System.out.println("The stereo is now off.");
+		System.out.println("The " + label + " stereo is now off.");
 	}
 
 	public void setCd() {
-		System.out.println("The stereo has been set to CD mode.");
+		System.out.println("The " + label + " stereo has been set to CD mode.");
 	}
 
 	public void setDvd() {
-		System.out.println("The stereo has been set to DVD mode.");
+		System.out.println("The " + label + " stereo has been set to DVD mode.");
 	}
 
 	public void setRadio() {
-		System.out.println("The stereo has been set to radio mode.");
+		System.out.println("The " + label + " stereo has been set to radio mode.");
 	}
 
 	public void setVolume(int volume) {
-		System.out.println("The stereo's volume has been set to " + volume + ".");
+		System.out.println("The " + label + " stereo's volume has been set to " + volume + ".");
 	}
 
 }

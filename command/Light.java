@@ -1,13 +1,17 @@
 public class Light {
 
-	public Light() {}
+	String label = "unlabeled";
+
+	public Light(String label) {
+		this.label = label;
+	}
 
 	public void on() {
-		System.out.println("The light is now on.");
+		System.out.println("The " + label + " light is now on.");
 	}
 
 	public void off() {
-		System.out.println("The light is now off.");
+		System.out.println("The " + label + " light is now off.");
 	}
 
 }
