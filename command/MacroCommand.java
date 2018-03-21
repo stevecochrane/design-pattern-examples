@@ -1,4 +1,4 @@
-public class MacroCommand implements Command {
+public class MacroCommand {
 
 	Command[] commands;
 
