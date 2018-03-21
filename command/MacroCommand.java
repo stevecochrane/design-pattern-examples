@@ -1,4 +1,4 @@
-public class MacroCommand {
+public class MacroCommand implements Command {
 
 	Command[] commands;
 
@@ -11,5 +11,7 @@ public class MacroCommand {
 			commands[i].execute();
 		}
 	}
+
+	public void undo() {}
 
 }
