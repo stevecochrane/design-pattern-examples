@@ -1,11 +1,12 @@
 import java.lang.StringBuffer;
 
-public class RemoteControl {
+public class RemoteControlWithUndo {
 
 	Command[] onCommands;
 	Command[] offCommands;
+	Command undoCommand;
 
-	public RemoteControl() {
+	public RemoteControlWithUndo() {
 		onCommands = new Command[7];
 		offCommands = new Command[7];
 
@@ -14,6 +15,8 @@ public class RemoteControl {
 			onCommands[i] = noCommand;
 			offCommands[i] = noCommand;
 		}
+
+		undoCommand = noCommand;
 	}
 
 	public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -23,10 +26,16 @@ public class RemoteControl {
 
 	public void onButtonWasPressed(int slot) {
 		onCommands[slot].execute();
+		undoCommand = onCommands[slot];
 	}
 
 	public void offButtonWasPressed(int slot) {
 		offCommands[slot].execute();
+		undoCommand = offCommands[slot];
+	}
+
+	public void undoButtonWasPressed() {
+		undoCommand.undo();
 	}
 
 	public String toString() {
