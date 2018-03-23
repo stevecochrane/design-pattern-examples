@@ -111,3 +111,19 @@ instantiated, or if the creation of that Singleton class doesn't have too much o
 `SingletonDCL.java`, which shows a double-checked locking technique where `synchronized` is only used once, when first
 instantiating the class. However, this can be overkill if there are no performance concerns, and it isn't compatible
 with Java 5 and older.
+
+## Command Pattern
+
+Command is another way to encapsulate something that varies. In this case, it's an operation. The Command pattern
+decouples an object making a request (the invoker) from the object performing the request (the receiver).
+
+In this example we have a programmable remote control (the RemoteControl and RemoteControlWithUndo classes), which has
+several slots with "on" and "off" buttons. The remote control can be programmed to interact with various household
+objects (classes including CeilingFan, GarageDoor, Light, etc.) but these classes do not always have obvious "on" and
+"off" commands. (For example, CeilingFan does not just have one "on" state, but three different speeds.) So we use
+Command classes such as CeilingFanOnCommand to manage those mappings without altering either the invoker or the
+receiver.
+
+That's in the `java7` directory. This results in many small Command implementation classes, which can be a little hard
+to manage, so in the `java8` there's an example of how this can be reduced using Java 8's Lambda feature. With lambdas
+and method references in place, there's no longer a need for all of those Command implementations.
