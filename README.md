@@ -127,3 +127,14 @@ receiver.
 That's in the `java7` directory. This results in many small Command implementation classes, which can be a little hard
 to manage, so in the `java8` there's an example of how this can be reduced using Java 8's Lambda feature. With lambdas
 and method references in place, there's no longer a need for all of those Command implementations.
+
+## Adapter & Facade Patterns
+
+These are two patterns that the book groups together. An Adapter is a class you can make to adapt a class to a
+different interface, sort of like an adapter for converting a European electrical device's plug to fit into an American
+electrical outlet. There are two examples here: one for converting a Turkey class to work with our Duck interface from
+the previous Strategy example, and two Adapters for converting from a Java Enumeration to an Iterator and vice versa.
+
+The Facade pattern is sort of like a macro, where you can provide a simplified interface to a complex network of
+classes. In this example we have a HomeTheaterFacade, which has watchMovie and endMovie methods that manipulate several
+related objects through a single method call.
