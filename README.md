@@ -174,3 +174,23 @@ The Facade pattern is sort of like a macro, where you can provide a simplified
 interface to a complex network of classes. In this example we have a
 HomeTheaterFacade, which has watchMovie and endMovie methods that manipulate
 several related objects through a single method call.
+
+## Template Pattern
+
+Template is yet another way of encapsulating something that varies, and in this
+case, it's an algorithm. The Template Pattern defines the steps of an algorithm,
+and then defers to subclasses for the implementation of the individual steps.
+
+In the example in the `template-method` directory, we
+started with a Coffee class and a Tea class, which both had very similar
+functionality for preparation, where there were four methods in both, two of
+which were the same, and two were very similar, so we made a new
+CaffeineBeverage class that Coffee and Tea extend, such that Coffee and Tea now
+only have the code that applies specifically to Coffee and Tea. There's also
+a couple of alternate "WithHook" classes that demonstrate the concept of a
+template hook, where there are extra steps taken to allow for more customization
+in the subclasses when necessary.
+
+And in the `comparable` directory there is an example of built-in Java
+functionality that makes use of the Template Pattern: Comparable, which in this
+case is used for sorting an array.
