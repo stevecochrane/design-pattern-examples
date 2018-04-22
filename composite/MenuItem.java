@@ -28,6 +28,10 @@ public class MenuItem extends MenuComponent {
 		return price;
 	}
 
+	public Iterator<MenuComponent> createIterator() {
+		return new NullIterator();
+	}
+
 	public void print() {
 		System.out.print("  " + getName());
 		if (isVegetarian()) {

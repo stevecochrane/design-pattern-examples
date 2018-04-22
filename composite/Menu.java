@@ -4,6 +4,7 @@ import java.util.Iterator;
 public class Menu extends MenuComponent {
 
 	ArrayList<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
+	Iterator<MenuComponent> iterator = null;
 	String name;
 	String description;
 
@@ -30,6 +31,13 @@ public class Menu extends MenuComponent {
 
 	public String getDescription() {
 		return description;
+	}
+
+	public Iterator<MenuComponent> createIterator() {
+		if (iterator == null) {
+			iterator = new CompositeIterator(menuComponents.iterator());
+		}
+		return iterator;
 	}
 
 	public void print() {
