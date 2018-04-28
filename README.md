@@ -194,3 +194,20 @@ in the subclasses when necessary.
 And in the `comparable` directory there is an example of built-in Java
 functionality that makes use of the Template Pattern: Comparable, which in this
 case is used for sorting an array.
+
+## Iterator & Composite Patterns
+
+Two patterns that work well together. Iterator is for providing a means to
+iterate through all of the objects in a group without exposing the underlying
+implementation of that group. For example, in the `custom-iterator` directory
+we have two different menus, DinerMenu and PancakeHouseMenu, and these have
+different implementations (one uses an Array and one uses an ArrayList) but by
+creating an Iterator class and extending it for each, other classes like
+Waitress who need to iterate over each, don't need to know.
+
+Composite provides a means to iterate over an entire structure of objects, among
+other things. With a Composite you can process a single object or a composite (a
+group of similar objects) in the same way, without needing to know whether it's
+a single object or not. In the example here we have a similar use case, where
+there is a Waitress class printing menus, but in this case we can print the
+entire menu in a single method.
