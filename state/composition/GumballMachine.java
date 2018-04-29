@@ -35,6 +35,30 @@ public class GumballMachine {
 		state.dispense();
 	}
 
+	public State getState() {
+		return state;
+	}
+
+	public State getSoldOutState() {
+		return soldOutState;
+	}
+
+	public State getNoQuarterState() {
+		return noQuarterState;
+	}
+
+	public State getHasQuarterState() {
+		return hasQuarterState;
+	}
+
+	public State getSoldState() {
+		return soldState;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
 	void setState(State state) {
 		this.state = state;
 	}
