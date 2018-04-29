@@ -211,3 +211,16 @@ group of similar objects) in the same way, without needing to know whether it's
 a single object or not. In the example here we have a similar use case, where
 there is a Waitress class printing menus, but in this case we can print the
 entire menu in a single method.
+
+## State Pattern
+
+The State pattern solves a common problem: having way too many conditional
+statements. The `monolith` directory here shows a not-unrealistic implementation
+where four different states are implemented, and for each method, conditionals
+are made and each state is represented in each method. This works, but it's very
+laborious to modify and expand upon in the future.
+
+Enter the State pattern, as should in the `composition` directory. Here there is
+a State interface, and separate classes for each state. This way it's easy to
+add new states, as only the new state and GumballMachine itself need to be
+modified.
