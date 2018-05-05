@@ -46,7 +46,7 @@ public class GumballMachine extends UnicastRemoteObject implements GumballMachin
 
 	public void refill(int count) {
 		this.count = count;
-		state = NoQuarterState;
+		state = noQuarterState;
 	}
 
 	public State getState() {
