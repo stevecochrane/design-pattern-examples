@@ -18,7 +18,7 @@ public class Observable implements QuackObservable {
 		Iterator iterator = observers.iterator();
 
 		while (iterator.hasNext()) {
-			Observer observer = iterator.next();
+			Observer observer = (Observer) iterator.next();
 			observer.update(duck);
 		}
 	}
