@@ -13,7 +13,7 @@ public class Flock implements Quackable {
 		Iterator<Quackable> iterator = quackers.iterator();
 
 		while (iterator.hasNext()) {
-			Quackable quacker = iterator.next();
+			Quackable quacker = (Quackable)iterator.next();
 			quacker.quack();
 		}
 	}
@@ -22,8 +22,8 @@ public class Flock implements Quackable {
 		Iterator<Quackable> iterator = quackers.iterator();
 
 		while (iterator.hasNext()) {
-			Quackable duck = (Quackable)iterator.next();
-			duck.registerObserver(observer);
+			Quackable quacker = (Quackable)iterator.next();
+			quacker.registerObserver(observer);
 		}
 	}
 
