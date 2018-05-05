@@ -15,12 +15,16 @@ public class Observable implements QuackObservable {
 	}
 
 	public void notifyObservers() {
-		Iterator iterator = observers.iterator();
+		Iterator<Observer> iterator = observers.iterator();
 
 		while (iterator.hasNext()) {
-			Observer observer = (Observer) iterator.next();
+			Observer observer = (Observer)iterator.next();
 			observer.update(duck);
 		}
+	}
+
+	public Iterator<Observer> getObservers() {
+		return observers.iterator();
 	}
 
 }
