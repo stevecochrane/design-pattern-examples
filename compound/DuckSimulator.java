@@ -37,6 +37,9 @@ public class DuckSimulator {
 
 		flockOfDucks.add(flockOfMallards);
 
+		Quackologist quackologist = new Quackologist();
+		flockOfDucks.registerObserver(quackologist);
+
 		System.out.println("\nDuckSimulator: Whole Flock Simulation");
 		simulate(flockOfDucks);
 
