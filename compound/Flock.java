@@ -22,7 +22,7 @@ public class Flock implements Quackable {
 		Iterator<Quackable> iterator = quackers.iterator();
 
 		while (iterator.hasNext()) {
-			Quackable duck = (Quackable) iterator.next();
+			Quackable duck = (Quackable)iterator.next();
 			duck.registerObserver(observer);
 		}
 	}
