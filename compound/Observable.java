@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Observer;
 
 public class Observable implements QuackObservable {
 
