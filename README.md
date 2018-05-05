@@ -224,3 +224,19 @@ Enter the State pattern, as should in the `composition` directory. Here there is
 a State interface, and separate classes for each state. This way it's easy to
 add new states, as only the new state and GumballMachine itself need to be
 modified.
+
+## Proxy Pattern
+
+A Proxy is an object that acts as a representative for another object. There are
+several different kinds. A Remote Proxy (which there is an example for here) is
+an object that acts as a proxy for another object running on a separate JVM
+across the network, and it accepts commands and relays them. A Virtual Proxy is
+for objects that are expensive to instantiate and can be used for tasks like
+placeholder content while something is loading. A Protection Proxy can control
+and restrict access to another object. And those are just a few of many possible
+variations on the Proxy pattern.
+
+I had some issues getting `rmiregistry` to work locally, but with this example
+you can make some GumballMachine instances available over the network with the
+GumballMachineTestDrive class and then monitor them with the
+GumballMachineTestDrive class.
